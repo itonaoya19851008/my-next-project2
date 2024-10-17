@@ -1,0 +1,27 @@
+$sp:640px;
+
+@mixin sp{
+  @media (max-width:$sp) {
+    @content;
+  }
+}
+.header{
+    position: absolute;
+    padding: 16px 24px 8px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @include sp{
+        padding: 24px 16px 8px;
+    }
+}
+
+.logoLink{
+    display: flex;
+}
+.logo{
+    height: 24px;
+    width: auto;
+}

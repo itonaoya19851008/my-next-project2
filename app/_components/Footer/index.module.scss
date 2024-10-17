@@ -1,0 +1,30 @@
+$sp:640px;
+
+@mixin sp{
+  @media (max-width:$sp) {
+    @content;
+  }
+}
+
+.footer{
+    padding: 16px 24px;
+    text-align: center;
+    color: var(--color-text-sub);
+    font-size: 0.8rem;
+    margin-top: 80px;
+}
+.nav{
+    margin-bottom: 16px;
+}
+.items{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1rem;
+    white-space: nowrap;
+    @include sp{
+        flex-wrap: wrap;
+        gap: 20px;
+     
+    }
+}

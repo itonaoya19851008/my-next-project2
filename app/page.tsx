@@ -1,15 +1,9 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
+import { ButtonLink } from "./_components/ButtonLink";
+import { News } from "./_libs/microcms";
+import { NewsList } from "./_components/NewsList";
 
-type News = {
-  id: string;
-  title: string;
-  category: {
-    name: string;
-  };
-  publishedAt: string;
-  createdAt: string;
-};
 const data: {
   contents: News[];
 } = {
@@ -45,7 +39,10 @@ const data: {
 };
 
 export default function Home() {
+  const sliceData = data.contents.slice(0,2);
+
   return (
+    <>
     <section className={styles.top}>
       <div>
         <h1 className={styles.title}>テクノロジーの力で世界を変える</h1>
@@ -61,5 +58,15 @@ export default function Home() {
         height={1200}
       />
     </section>
+    <section className={styles.news}>
+      <h2 className={styles.newsTitle}>News</h2>
+    
+      <NewsList news={sliceData}/>
+      
+      <div className={styles.newsLink}>
+        <ButtonLink href="/news">もっとみる</ButtonLink>
+      </div>
+    </section>
+    </>
   );
 }
