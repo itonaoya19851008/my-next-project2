@@ -15,6 +15,19 @@ export const Header = ()=>{
                     priority
                 />
             </Link>
+            <nav className={styles.nav}>
+                <ul className={styles.items}>
+                    <li>
+                        <Link href="/news">ニュース</Link>
+                    </li>
+                    <li>
+                        <Link href="/members">メンバー</Link>
+                    </li>
+                    <li>
+                        <Link href="/contact">お問い合わせ</Link>
+                    </li>
+                </ul>
+            </nav>
         </header>
     )
 }
