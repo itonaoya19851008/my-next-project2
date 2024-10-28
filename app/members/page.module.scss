@@ -1,3 +1,10 @@
+$sp:640px;
+
+@mixin sp{
+  @media (max-width:$sp) {
+    @content;
+  }
+}
 .text{
     text-align: center;
     margin-bottom: 40px;
@@ -9,6 +16,10 @@
     margin-bottom: 80px;
     &:nth-child(even){
         flex-direction: row-reverse;
+    }
+    @include sp{
+        flex-direction: column !important;
+        align-items: center;
     }
 }
 .image{

@@ -15,7 +15,7 @@ export const Footer = ()=>{
                     </li>
                     <li className={styles.item}>
                         <Link
-                        href="/member"
+                        href="/members"
                         >
                             メンバー
                         </Link>
@@ -24,7 +24,7 @@ export const Footer = ()=>{
                         <Link
                         href="/contact"
                         >
-                            お問合せ
+                            お問い合わせ
                         </Link>
                     </li>
                 </ul>
