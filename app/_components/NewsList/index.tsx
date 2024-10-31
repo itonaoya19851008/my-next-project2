@@ -9,7 +9,7 @@ import { Date } from "../Date";
 type Props = {
     news: News[];
 };
-
+import Link from "next/link";
 export const NewsList:FC<Props> = (props)=>{
     const {news} = props;
     if(news.length === 0){
@@ -19,7 +19,7 @@ export const NewsList:FC<Props> = (props)=>{
         <ul>
         {news.map((article)=>(
             <li className={styles.list} key={article.id}>
-              <div className={styles.link}>
+              <Link href={`/news/${article.id}`} className={styles.link}>
                 <Image 
                 className={styles.image}
                 alt=""
@@ -36,7 +36,7 @@ export const NewsList:FC<Props> = (props)=>{
                     <Date date={article.publishedAt}/>
                   </dd>
                 </dl>
-              </div>
+              </Link>
             </li>
           ))}
         </ul>

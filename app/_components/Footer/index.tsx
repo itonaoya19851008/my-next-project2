@@ -15,7 +15,7 @@ export const Footer = ()=>{
                     </li>
                     <li className={styles.item}>
                         <Link
-                        href="/member"
+                        href="/members"
                         >
                             メンバー
                         </Link>
