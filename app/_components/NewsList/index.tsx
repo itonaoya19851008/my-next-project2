@@ -20,16 +20,27 @@ export const NewsList:FC<Props> = (props)=>{
         {news.map((article)=>(
             <li className={styles.list} key={article.id}>
               <Link href={`/news/${article.id}`} className={styles.link}>
-                <Image 
-                className={styles.image}
-                alt=""
-                src="/no-image.png"
-                width={1200}
-                height={630}
-                />
+                {article.thumbnail?(
+                  <Image
+                  src={article.thumbnail.url}
+                  alt=""
+                  className={styles.image}
+                  width={article.thumbnail.width}
+                  height={article.thumbnail.height}
+                  />
+                ):(
+                  <Image
+                  src='/no-image.png'
+                  alt="No Image"
+                  className={styles.image}
+                  width={1200}
+                  height={630}
+                  />
+                )}
                 <dl className={styles.content}>
                   <dt className="title">
                     {article.title}
+                    
                   </dt>
                   <dd className={styles.meta}>
                     <Cate category={article.category}/>
