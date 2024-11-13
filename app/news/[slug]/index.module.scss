@@ -1,0 +1,14 @@
+$sp:800px;
+
+@mixin sp{
+  @media (max-width:$sp) {
+    @content;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--color-border);
+  margin-top: 80px;
+  padding-top: 40px;
+}
