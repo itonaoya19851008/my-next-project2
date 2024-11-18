@@ -44,7 +44,7 @@ export const NewsList:FC<Props> = (props)=>{
                   </dt>
                   <dd className={styles.meta}>
                     <Cate category={article.category}/>
-                    <Date date={article.publishedAt}/>
+                    <Date date={article.publishedAt||article.createdAt}/>
                   </dd>
                 </dl>
               </Link>
