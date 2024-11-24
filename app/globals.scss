@@ -1,4 +1,4 @@
-$sp:640px;
+$sp:800px;
 
 @mixin sp{
   @media (max-width:$sp) {
@@ -34,7 +34,7 @@ $sp:640px;
 html,
 body {
   max-width: 100vw;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {

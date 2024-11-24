@@ -1,6 +1,7 @@
 import styles from "./index.module.scss";
 import Image from "next/image";
 import { FC } from "react";
+import { formatDate } from "@/app/_libs/utils";
 type Props = {
     date:string;
 }
@@ -15,7 +16,7 @@ export const Date:FC<Props> = (props) => {
                 height={16}
                 priority
             />
-            {date}
+            {formatDate(date)}
         </span>
     )
 }
